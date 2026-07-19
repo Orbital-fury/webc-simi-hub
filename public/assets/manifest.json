@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    {
+      "id": "subscription",
+      "label": "Abonnement",
+      "routePath": "abonnement",
+      "entrypoint": "http://localhost:4202/main.js",
+      "widgetElement": "subscription-widget",
+      "pageElement": "subscription-page",
+      "requiredRoles": ["user"],
+      "integrity": "sha256-7BNwij1SfsLfrJ27sc+Q0m/Sg2ZNhEE3QFnfhV6uD44=",
+      "assetBaseUrl": "http://localhost:4202/"
+    }
+  ]
+}

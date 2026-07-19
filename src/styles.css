@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'webc-simi-ui/tokens.css';
+
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}

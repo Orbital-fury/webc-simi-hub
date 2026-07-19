@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  block-size: 100%;
+}
+
+.hub-plugin-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 40vh;
+}
+
+.hub-plugin-host {
+  display: block;
+  block-size: 100%;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}

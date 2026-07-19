@@ -1,0 +1,34 @@
+@switch (uiState()) {
+  @case ('idle') {
+    <div class="hub-plugin-state">
+      <div class="dashboard-header">
+        <h1>Tableau de bord</h1>
+      </div>
+
+      <div class="dashboard-grid">
+        @for (plugin of plugins(); track plugin.id) {
+          <app-plugin-card [plugin]="plugin" />
+        } @empty {
+          <p>Aucun plugin installé pour le moment.</p>
+        }
+      </div>
+    </div>
+  }
+  @case ('loading') {
+    <div class="hub-plugin-state" role="status" aria-live="polite">Chargement du plugin...</div>
+  }
+  @case ('error') {
+    <div class="hub-plugin-state">
+      <simi-card variant="bordered">
+        <span slot="header">Plugin indisponible</span>
+        <p>{{ errorMessage() }}</p>
+        <div slot="footer">
+          <simi-button color="primary" (click)="retry()">Reessayer</simi-button>
+        </div>
+      </simi-card>
+    </div>
+  }
+  @case ('loaded') {
+    <div class="hub-plugin-host" #pluginHost></div>
+  }
+}

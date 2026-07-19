@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvh;
+  font-family: var(--simi-font-family, system-ui, sans-serif);
+  background-color: var(--simi-color-background);
+}
+
+.hub-toast-stack {
+  position: fixed;
+  inset-block-end: var(--simi-space-lg, 1.5rem);
+  inset-inline-end: var(--simi-space-lg, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--simi-space-sm, 0.5rem);
+  z-index: var(--simi-z-modal, 1000);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  min-height: 80px;
+  border-top: 1px var(--simi-color-border) solid;
+  font-size: var(--simi-font-size-sm);
+  color: var(--simi-color-text-faint);
+}

@@ -1,0 +1,8 @@
+.card-success {
+  cursor: pointer;
+}
+
+.skeleton-loader {
+  opacity: 0.6;
+  font-style: italic;
+}

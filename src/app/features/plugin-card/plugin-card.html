@@ -1,0 +1,26 @@
+@switch (uiState()) {
+  @case ('loading') {
+    <simi-card variant="bordered">
+      <span slot="header">{{ plugin().label }}</span>
+      <div class="skeleton-loader">Chargement des données...</div>
+    </simi-card>
+  }
+
+  @case ('error') {
+    <simi-card variant="bordered" class="card-error">
+      <span slot="header">{{ plugin().label }} (Hors ligne)</span>
+      <p>Impossible de contacter le plugin.</p>
+      <div slot="footer">
+        <simi-button color="secondary" (click)="loadPlugin()">Réessayer</simi-button>
+      </div>
+    </simi-card>
+  }
+
+  @case ('loaded') {
+    <simi-card variant="bordered" class="card-success" (click)="navigateToPlugin()">
+      <span slot="header">{{ plugin().label }}</span>
+      <!-- Emplacement où le Web Component Widget sera injecté -->
+      <div #widgetHost></div>
+    </simi-card>
+  }
+}
