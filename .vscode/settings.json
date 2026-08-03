@@ -9,5 +9,6 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "html.customData": ["./node_modules/webc-simi-ui/dist/custom-elements.json"]
 }

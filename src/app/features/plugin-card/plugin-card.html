@@ -5,7 +5,6 @@
       <div class="skeleton-loader">Chargement des données...</div>
     </simi-card>
   }
-
   @case ('error') {
     <simi-card variant="bordered" class="card-error">
       <span slot="header">{{ plugin().label }} (Hors ligne)</span>
@@ -15,7 +14,6 @@
       </div>
     </simi-card>
   }
-
   @case ('loaded') {
     <simi-card variant="bordered" class="card-success" (click)="navigateToPlugin()">
       <span slot="header">{{ plugin().label }}</span>
