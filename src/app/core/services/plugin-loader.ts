@@ -32,7 +32,21 @@ export class PluginLoader {
           `Impossible de charger le manifeste des plugins (HTTP ${response.status}).`,
         );
       }
-      return (await response.json()) as PluginManifest;
+      const manifest = (await response.json()) as PluginManifest;
+
+      // En dev local, on crée une copie du manifeste avec les URLs réécrites
+      if (isDevMode()) {
+        return {
+          ...manifest,
+          plugins: manifest.plugins.map((plugin) => ({
+            ...plugin,
+            entrypoint: `${plugin.devPort}/main.js`,
+            assetBaseUrl: `${plugin.devPort}/`,
+          })),
+        };
+      }
+
+      return manifest;
     },
   });
 

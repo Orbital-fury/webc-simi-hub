@@ -1,15 +1,16 @@
 {
   "plugins": [
     {
-      "id": "subscription",
+      "id": "budget-monitor",
       "label": "Abonnement",
       "routePath": "abonnement",
-      "entrypoint": "http://localhost:4202/main.js",
+      "entrypoint": "/budget-monitor-plugin/main.js",
+      "devPort": "http://localhost:4202",
       "widgetElement": "subscription-widget",
       "pageElement": "subscription-page",
       "requiredRoles": ["user"],
-      "integrity": "sha256-7BNwij1SfsLfrJ27sc+Q0m/Sg2ZNhEE3QFnfhV6uD44=",
-      "assetBaseUrl": "http://localhost:4202/"
+      "integrity": "sha256-2zHXl94LlBsGoXRue5amdknm/Etl+83hmnQ5EGBC6bQ=",
+      "assetBaseUrl": "/budget-monitor-plugin/"
     }
   ]
 }

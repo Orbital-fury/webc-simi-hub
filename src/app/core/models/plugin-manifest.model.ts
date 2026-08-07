@@ -9,6 +9,7 @@ export interface PluginManifestEntry {
   readonly label?: string;
   readonly routePath: string;
   readonly entrypoint: string;
+  readonly devPort: string;
   readonly widgetElement: string;
   readonly pageElement: string;
   readonly requiredRoles: readonly string[];
