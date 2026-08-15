@@ -9,7 +9,7 @@
       "widgetElement": "subscription-widget",
       "pageElement": "subscription-page",
       "requiredRoles": ["user"],
-      "integrity": "sha256-x6SnN7I+629DEIEyp4Vv6mbv952+wHl2iS+06WZsK3U=",
+      "integrity": "sha256-KYbrrIlkiZxh6whnUKT5RtiCzxz9oFoIwgPQH1kUUfU=",
       "assetBaseUrl": "/budget-monitor-plugin/"
     }
   ]
